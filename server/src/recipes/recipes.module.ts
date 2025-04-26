@@ -1,5 +1,5 @@
 import { Module } from "@nestjs/common";
-import { RecipesController } from "./api/recipe.controller";
+import { RecipesController } from "./recipe/recipe.controller";
 import { RecipesService } from "./services/recipes.service";
 import { MealDbService } from "./services/meal-db.service";
 
@@ -7,4 +7,4 @@ import { MealDbService } from "./services/meal-db.service";
   controllers: [RecipesController],
   providers: [RecipesService, MealDbService],
 })
-export class RecipeModule {}
+export class RecipesModule {}

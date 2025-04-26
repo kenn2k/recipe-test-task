@@ -14,3 +14,9 @@ export interface MealApiResponse {
 export interface AxiosMealResponse {
   data: MealApiResponse;
 }
+
+export interface FilterParams {
+  i?: string;
+  c?: string;
+  a?: string;
+}

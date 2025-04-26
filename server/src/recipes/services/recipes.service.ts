@@ -1,27 +1,20 @@
 import { Injectable } from "@nestjs/common";
 import { MealDbService } from "./meal-db.service";
+import { FilterParams } from "../interfaces/meal.interface";
 
 @Injectable()
 export class RecipesService {
-  constructor(private readonly mealDb: MealDbService) {}
+  constructor(private readonly mealDbService: MealDbService) {}
 
   async getAll() {
-    return this.mealDb.fetchAll();
+    return this.mealDbService.fetchAll();
   }
 
-  async filterByIngredient(ingredient: string) {
-    return this.mealDb.filterBy("i", ingredient);
-  }
-
-  async filterByCategory(category: string) {
-    return this.mealDb.filterBy("c", category);
-  }
-
-  async filterByCountry(country: string) {
-    return this.mealDb.filterBy("a", country);
+  async filterBy(params: FilterParams) {
+    return this.mealDbService.filterBy(params);
   }
 
   async getById(id: string) {
-    return this.mealDb.getById(id);
+    return this.mealDbService.getById(id);
   }
 }
