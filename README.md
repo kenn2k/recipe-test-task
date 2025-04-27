@@ -1,24 +1,24 @@
-#📝 Documentation
+**📝 Documentation**
 
-1. Clone the repository:
+**1. Clone the repository:**
 
 ```bash
 git clone https://github.com/kenn2k/recipe-test-task.git
 cd recipe-test-task
 ```
-2. Install server dependencies:
+**2. Install server dependencies:**
 ```bash
 cd server
 yarn install
 cd ..
 ```
-3. Install client dependencies:
+**3. Install client dependencies:**
 ```bash
 cd client
 yarn install
 cd ..
 ```
-🔧 Configuration (Environment Variables)
+**🔧 Configuration (Environment Variables)**
 
 Server Setup:
 
@@ -36,11 +36,11 @@ NEXT_PUBLIC_API_BASE_URL = http://localhost:4000
 ```
 Running the Application
 
-1. Start the server:
+**1. Start the server:**
 ```bash
 yarn start:dev
 ```
-2. Start the client:
+**2. Start the client:**
 ```bash
 yarn dev
 ```
